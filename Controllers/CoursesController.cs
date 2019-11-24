@@ -2,6 +2,10 @@
 using CourseLibrary.API.Models;
 using CourseLibrary.API.Services;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Infrastructure;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Options;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -72,6 +76,6 @@ namespace CourseLibrary.API.Controllers
             return CreatedAtRoute("GetCourseForAuthor",
                 new { authorId = authorId, courseId = courseToReturn.Id }, 
                 courseToReturn);
-        }
+        } 
     }
 }
